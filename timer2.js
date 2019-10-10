@@ -150,9 +150,10 @@ playButton.addEventListener('click', playTimer);
 function pauseTimer() {
    
     if ( pause == false ) {
+    clearInterval(countdown);  
     minutes = secondsLeft;
     timeElapsed = 62.8 - diff;
-    clearInterval(countdown);  
+    
     
     pause = true;
     hidePlayPause();
@@ -179,13 +180,15 @@ function hidePlayPause() {
 // break
 
 function breakTimer() {
+    
+    clearInterval(countdown); 
     sessionInProgress = true;
     minutes = 300;
     timeElapsed = 0;
     finishedCycle = false;
     currentCycle = "BREAK";
     workCycle = false;
-    clearInterval(countdown); 
+   
 
     shortBreaksCompleted++;
     
@@ -202,13 +205,14 @@ breakButton .addEventListener('click', breakTimer );
 // long break 
 
 function longBreak() {
+    clearInterval(countdown); 
     sessionInProgress = true;
     minutes = 900;
     timeElapsed = 0;
     finishedCycle = false;
     currentCycle = "LONG BREAK";
     workCycle = false;
-    clearInterval(countdown); 
+    
 
     shortBreaksCompleted++;
     
@@ -219,7 +223,7 @@ function longBreak() {
     completedAndOrSkippedSessionCouneter();
 }
 
-longBreakButton.addEventListener('click', long );
+longBreakButton.addEventListener('click', longBreak );
 
 // reset 
 
@@ -240,7 +244,7 @@ cycleCounterDisplay.innerHTML = fullCyclesCompleted;
  
 }
 
-resetButton.addEventListener('click', resetTimer, resetTimer );
+resetButton.addEventListener('click', resetTimer);
 
 
 // start a new cycle when old one finishes
