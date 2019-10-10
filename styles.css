@@ -1,0 +1,154 @@
+
+body {
+    height: 100vh;
+    background-color: #fecea8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+}
+
+
+.container {
+    background-color: #99b898;
+    height: 100vh;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.top {
+    width: 100vw;
+    background-color: #1e3d42;
+    position: fixed;
+    height: 80px;
+    margin-top: 0;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+.top h1 {
+    color: white;
+    
+}
+
+.timerBox {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 400px;
+    text-align: center;
+    margin: 0;
+    margin-top: 100px;
+
+}
+
+.timerBox p {
+    color: white;
+    font-size: 22px;
+}
+
+canvas {
+    height: 400px;
+    width: 400px;
+    background-color: #ff847c;
+    border-radius: 50%;
+    z-index: 1000;
+
+}
+
+/* counter */
+.displayTimeLeft {
+    display: none;
+}
+
+/* circle */
+
+.item {
+    position: relative;
+    float: left;
+}
+
+.item h2 {
+    text-align:center;
+    position: absolute;
+    line-height: 125px;
+    width: 100%;
+}
+
+svg {
+    transform: rotate(-90deg);
+}
+
+.circle_animation {
+  stroke-dasharray: 440; /* this value is the pixel circumference of the circle */
+  stroke-dashoffset: 440;
+  transition: all 1s linear;
+}
+
+/* buttons */
+.topLineButtons {
+    display: inline-block;
+}
+
+.bottomLineButton {
+    display: block;
+}
+
+.pomodoroButton {
+    box-shadow: 0px 10px 14px -7px #1e3d42;
+	background: ;
+	background-color:#2a363b;
+	border-radius:8px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	padding:13px 32px;
+	text-decoration:none;
+    text-shadow:0px 1px 0px #3d768a;
+    margin: 10px;
+}
+
+
+
+.playPause {
+    border-radius: 50%;
+    height: 50px;
+    width: 45px;
+    padding-left: 20px;
+}
+
+.buttons #pause {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+
+.pomodoroButton:hover {
+    background-color: #ff847c;
+	
+}
+.pomodoroButton:active {
+	position:relative;
+	top:1px;
+}
+
+/* footer */
+
+footer p {
+    color: white;
+    text-align: center;
+    font-size: 3em;
+}
+

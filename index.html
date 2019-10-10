@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Pomodoro Timer by TomW</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <script src="https://kit.fontawesome.com/794b746eef.js" crossorigin="anonymous"></script>
+   
+</head>
+<body>
+<div class="container">
+<div class="top">
+    <h1>POMODORO TIMER</h1>
+</div>
+
+<div class="timerBox">
+    <p>SESSION : <span id="sessionType">WORK</span></p>
+    <p>LENGTH : <span id="showTime">25:00</span></p>
+<h1 class="displayTimeLeft">00:00</h1>
+<span id="backgroundCircle"></span>
+<canvas height="400" width="400" id="counter"></canvas> 
+
+<div class="buttons">
+    <div class="topLineButtons">
+<button class="pomodoroButton" id="startStop">WORK</button>
+<button class="pomodoroButton playPause" id="play"><i class="fas fa-play"></i></button>
+<button class="pomodoroButton playPause" id="pause"><i class="fas fa-pause"></i></button>
+<button class="pomodoroButton" id="break">BREAK</button><br>
+</div>
+    <div class="bottomLineButton">
+<button class="pomodoroButton" id="longBreak">LONG BREAK</button><br>
+<button class="pomodoroButton" id="reset">RESET</button>
+</div>
+<br>
+<p id="workCycleCounter"><span id="currentCycleDisplay"></span>/<span id="totalCyclesDisplay"></span></p>
+</div>
+
+</div>
+
+
+</div>
+
+    
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src='timer2.js'></script>   
+</body>
+</html>
