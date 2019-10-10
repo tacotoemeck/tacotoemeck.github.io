@@ -1,21 +1,27 @@
 
 body {
     height: 100vh;
+    min-height: 1024px;
     background-color: #fecea8;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     font-family: monospace;
+    
 }
 
 
 .container {
     background-color: #99b898;
-    height: 100vh;
+    height: 100%;
     width: 500px;
     display: flex;
     justify-content: center;
+
+    top: 0;
+    position: fixed;
     /* align-items: center; */
 }
 
@@ -45,6 +51,7 @@ body {
     text-align: center;
     margin: 0;
     margin-top: 100px;
+    align-items: center;
 
 }
 
@@ -60,6 +67,17 @@ canvas {
     border-radius: 50%;
     z-index: 1000;
 
+}
+
+@media screen and (max-width: 900px) {
+    canvas {
+        height: 300px;
+        width: 300px;
+        background-color: #ff847c;
+        border-radius: 50%;
+        z-index: 1000;
+    
+    }
 }
 
 /* counter */
