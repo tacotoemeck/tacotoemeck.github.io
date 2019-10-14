@@ -3,48 +3,99 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Pomodoro Timer by TomW</title>
+    <title>Pomodoro Timer</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='styles.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='styles2.css'>
     <script src="https://kit.fontawesome.com/794b746eef.js" crossorigin="anonymous"></script>
-   
 </head>
 <body>
-<div class="container">
-<div class="top">
-    <h1>POMODORO TIMER</h1>
-</div>
 
-<div class="timerBox">
-    <p>SESSION : <span id="sessionType">WORK</span></p>
-    <p>LENGTH : <span id="showTime">25:00</span></p>
-<h1 class="displayTimeLeft">00:00</h1>
-<span id="backgroundCircle"></span>
-<canvas height="400" width="400" id="counter"></canvas> 
+    <div class="container">
 
-<div class="buttons">
-    <div class="topLineButtons">
-<button class="pomodoroButton" id="startStop">WORK</button>
-<button class="pomodoroButton playPause" id="play"><i class="fas fa-play"></i></button>
-<button class="pomodoroButton playPause" id="pause"><i class="fas fa-pause"></i></button>
-<button class="pomodoroButton" id="break">BREAK</button><br>
-</div>
-    <div class="bottomLineButton">
-<button class="pomodoroButton" id="longBreak">LONG BREAK</button><br>
-<button class="pomodoroButton" id="reset">RESET</button>
-</div>
-<br>
-<p id="workCycleCounter"><span id="currentCycleDisplay"></span>/<span id="totalCyclesDisplay"></span></p>
-</div>
-
-</div>
+        <nav id="settings">
+            <div class="logo"><i class="fas fa-apple-alt"></i></div>
+            <h1 id="pomodoro">POMODORO</h1>
+            <div id="burger">
+                <div class="line1"></div>
+        		<div class="line2"></div>
+        		<div class="line3"></div>
+            </div>
+        </nav>
 
 
-</div>
+             <div class="settingsElement">
+
+                    <form name="settingsForm" id="myForm" >
+            
+                <h3 class="settingsSetup">WORK: <span id="showValueWorkDuration"></span></h3>
+                <input id="workDuration" class="slider" type="range" name="newTimeWork" min="1" max="100" value="25">
+            
+                
+                <h3 class="settingsSetup">BREAK: <span id="showValueShortDuration"></span></h3>
+                <input id="shortDuration" class="slider" type="range" name="newShortTime" min="1" max="100" value="25">
+
+                <h3 class="settingsSetup">LONG BREAK: <span id="showValueLongDuration"></span></h3>
+                <input id="longDuration" class="slider" type="range" name="newLongTime" min="1" max="100" value="25">
+
+                <h3 class="settingsSetup">ROUNDS: <span id="showValueRoundCounter"></span></h3>
+                <input id="numberOfSessionsCount" class="slider" type="range" name="newSessionsTotal" min="1" max="10" value="2">
+
+                <h3 class="settingsSetup">AUTO-PLAY  <label class="switch">
+                        <input id ="autoPlaySwitch" type="checkbox">
+                        <span class="sliderOnOff round"></span>
+                      </label>
+                    </h3>
+                
+                
+                
+            </form>
+            <button id="resetButton" class="formButton">RESET</button>
+                
+                
+            </div>
 
     
-    
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-<script src='timer2.js'></script>   
+
+        <div class="elements">
+
+       
+            <div class="counter">
+                <div class="timerTimeLeft">
+                    Select Pomodoro 
+                </div>
+                <div class="timerButtons">
+                    <button class="timerButtonClass red borderLeft" id="work">WORK</button>
+                    <button class="timerButtonClass goldenrod" id="break">BREAK</button>
+                    <button class="timerButtonClass venomGreen" id="longBreak">LONG BREAK</button>
+                </div>
+            </div>
+
+            <div class="playPause">
+                <button class="formButton playPauseButton" id="play"><i class="fas fa-play"></i></button>
+                <button class="formButton playPauseButton" id="pause"><i class="fas fa-pause"></i></button>
+                <button class="formButton playPauseButton" id="skip"><i class="fas fa-step-forward"></i></button>
+            </div>
+
+            <div class="log">
+                <div class="logTop"><h3 id="h3log">LOG</h3></div>
+                <div class="logDisplay">
+                    <div class="fullCyclesLog"><p class="logPleft">FULL CYCLES</p><p class="logPs"><span class="logSpans" id="fullCycleCounter"></span>/<span class="logSpans" id="totalFullCycleNumber"></span></p></div>
+                    <div class="fullCyclesLog"><p class="logPleft">WORK SESSIONS</p><p class="logPs"><span class="logSpans" id="workCycleCounter"></span>/<span class="logSpans" id="totalWorkCycleNumber"></span></p></div>
+                    <div class="fullCyclesLog"><p class="logPleft">BREAKS</p><p class="logPs"><span class="logSpans" id="breakCycleCounter"></span>/<span class="logSpans" id="totalBreakCycleNumber"></span></p></div>
+                    <div class="fullCyclesLog"><p class="logPleft">LONG BREAKS</p><p class="logPs"><span class="logSpans" id="longBreaks">0</span>
+                </div>
+            </div>
+
+        </div>
+
+        
+    </div>
+    <footer>
+            Made by TomW <a href="https://github.com/tacotoemeck    "> <i class="fab fa-twitter"></i></a>
+            <a href="https://twitter.com/TomaszWagner1"><i class="fab fa-github"></i></a>
+
+        </footer>
+
+<script src='timer1.js'></script>
 </body>
 </html>
