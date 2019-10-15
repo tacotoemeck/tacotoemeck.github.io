@@ -25,11 +25,12 @@ z-index: 1;
     .container { 
         width: 100vw;
         height: 100vh;
-        position: fixed;
+        
         
     }
     body {
         overflow: hidden;
+        position: fixed;
     }
 }
 
