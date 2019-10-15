@@ -160,7 +160,7 @@ function shortBreak() {
     currentCycle = "SHORT";
     seconds=shortBreakLength;
    
-    counterSection.style.backgroundColor = "goldenrod";
+    counterSection.style.backgroundColor = "#4CAF50";
     displayTimeLeft(shortBreakLength);
 };
 
@@ -174,7 +174,7 @@ function longBreak() {
     currentCycle = "LONG";
     seconds = longBreakLength;
 
-    counterSection.style.backgroundColor = "#728C00";
+    counterSection.style.backgroundColor = "#99b898";
     displayTimeLeft(longBreakLength);
 };
 
@@ -263,19 +263,22 @@ function showSettingMenu() {
     if (settingMenuONorOFF == false ) {
     settingsElementDisplay.style.display = "flex";
     elementsDisplay.style.display = "none";
+    settingsElementDisplay.classList.toggle('settings-active')
 
 
     settingMenuONorOFF = true;
     } else {
         elementsDisplay.style.display = "flex";
-        settingsElementDisplay.style.display = "none"; 
-
+        // settingsElementDisplay.style.display = "none"; 
+        settingsElementDisplay.classList.toggle('settings-active')
         settingMenuONorOFF = false;
 
     }
 }
 
 settingsMenu.addEventListener('click', showSettingMenu)
+
+// settings menu animation
 
 // form ( loop through the buttons instead of having a function for each)
 
