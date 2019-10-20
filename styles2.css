@@ -31,6 +31,9 @@ z-index: 1;
     body {
         width: 100vw;
         height: 90vh;
+
+        overflow-x: hidden; 
+        overflow-y: hidden;
         /* height: calc(var(--vh, 1vh) * 100);
         position: fixed;
         margin: 0; */
