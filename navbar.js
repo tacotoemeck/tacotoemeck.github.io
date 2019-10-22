@@ -1,6 +1,6 @@
 const burgerIcon = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
-const navLinksHidden = document.getElementsByClassName('hiddenNav') + 25;
+const navLinksHidden = document.getElementsByClassName('hiddenNav') + 5;
 const landingSection = document.querySelector('.landing');
 
 const navLinksClientWidth = navLinks.clientWidth;
