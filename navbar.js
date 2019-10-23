@@ -1,9 +1,10 @@
 const burgerIcon = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksHidden = document.getElementsByClassName('hiddenNav') + 5;
-const landingSection = document.querySelector('.landing');
+const landingSection = document.querySelector('.head');
 
 const navLinksClientWidth = navLinks.clientWidth;
+const navLinksClientHeight = navLinks.clientHeight;
 
 navLinks.style.marginRight = `-${navLinksClientWidth}` + `px`;
 const navHiddenMargin = navLinks.style.marginRight;

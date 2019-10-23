@@ -10,7 +10,7 @@ for ( let li of portfolioCarousel.querySelectorAll('li')) {
 
 // configuration 
 
-let width = 432;
+let width = 316;
 let count = 1;
 
 let list = portfolioCarousel.querySelector('ul');
