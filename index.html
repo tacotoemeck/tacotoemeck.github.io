@@ -27,7 +27,7 @@
     <div class="container">
         <nav class="nav-bar">
 
-            <div class="burger">
+            <div id="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
                 <div class="line3"></div>
@@ -102,13 +102,16 @@
                             <a class="bodyLinks"
                                 href="https://www.freecodecamp.org/certification/tacotomek/javascript-algorithms-and-data-structures"><img
                                     class="skillsCerts skillsImages" src="thumbs/javascriptCert.png"></a>
+                            <a class="bodyLinks"
+                                href="https://www.freecodecamp.org/certification/tacotomek/front-end-libraries"><img
+                                    class="skillsCerts skillsImages" src="thumbs/frontEndCert.png"></a>
                         </div>
                     </div>
                 </div>
 
                 <div class="skillBars">
                     <h1 class="aboutH">My core skills:</h1>
-                    <div class="skillsBox">
+                    <div id="skillsBox">
                         <p>HTML</p>
                         <div class="progress">
                             <div class="progress-bar">
@@ -145,46 +148,13 @@
                 <h1 class="aboutH">Some of my recent work:</h1>
             </div>
 
-            <div class="portfolioCarousel" id="portfolioCarousel">
-
-
-                <div class="gallery">
-                    <ul class="cardBoxes">
-                        <li>
-                            <div class="card card-1"><a href="http://mariasabina.co.uk/info/"><img class="cars-1"
-                                        src="thumbs/mariasabina.jpg"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"><a href="https://codepen.io/tacotomek/pen/ZEELBgV"><img
-                                        src="thumbs/pomodoro.png"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"><a href="https://codepen.io/tacotomek/pen/gOOewrZ"><img
-                                        src="thumbs/codeStudy.jpg"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"><a href="https://codepen.io/tacotomek/pen/LYYqQMp"><img
-                                        src="thumbs/todo.jpg"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"><a href="https://codepen.io/tacotomek/full/Vwwqqqo"><img
-                                        src="thumbs/mark.jpg"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"><a href="https://codepen.io/tacotomek/pen/mddaOqw"><img
-                                        src="thumbs/quoteGenerator.jpg"></a> </div>
-                        </li>
-                        <li>
-                            <div class="card card-1"></div>
-                        </li>
-                    </ul>
+            <div class="parentdiv">
+                <div class="carousel">
+                    <button class="carouselNav" id="navButtonLeftCarousel"><i class="fas fa-angle-left"></i></button>
+                    <button class="carouselNav" id="navButtonRightCarousel"><i class="fas fa-angle-right"></i></button>
+                    <button class="carouselNav" id="playPause"><i class="fas fa-play" id="play"></i><i
+                            class="fas fa-pause" id="pause"></i></button>
                 </div>
-                <div class="arrowBox">
-                    <i class="fas fa-chevron-left arrow prev"></i>
-                    <i class="fas fa-chevron-right arrow next"></i>
-                </div>
-
-
             </div>
 
             <div class="workInfo">
@@ -216,12 +186,6 @@
 
         </footer>
 
-
-        <script src="skills.js"></script>
-        <script src="navbar.js"></script>
-        <script src="carousel.js"></script>
-        <script src="hoverColors.js"></script>
-</body>
 
 </html>
 
