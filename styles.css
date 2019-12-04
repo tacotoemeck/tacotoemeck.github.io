@@ -565,7 +565,7 @@ transform: rotate(-45deg) translate(7px,10px);
 @media only screen and (max-width: 750px) {
     .carousel {
         height: 350px;
-        width: 500px;
+        width: 450px;
     }
   
   }
@@ -573,7 +573,7 @@ transform: rotate(-45deg) translate(7px,10px);
   @media only screen and (max-width: 500px) {
     .carousel {
         height: 235px;
-        width: 350px;
+        width: 300px;
     }
   
   }
@@ -581,7 +581,7 @@ transform: rotate(-45deg) translate(7px,10px);
   @media only screen and (max-width: 350px) {
     .carousel {
         height: 155px;
-        width: 235px;
+        width: 185px;
     }
   
   }
