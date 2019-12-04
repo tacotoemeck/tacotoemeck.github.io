@@ -27,7 +27,8 @@ body {
     --backgroundGradient: -webkit-linear-gradient(to right, #c04848, #480048); 
     --backgroundGradient:  linear-gradient(to right, #c04848, #480048);
 
-    --backgroundColor: #c04848;
+    --purple: #480048;
+    --red: #c04848;
     
     }
 
@@ -59,7 +60,7 @@ body {
 
 /* burger */
 #burger {
-    background: #480048;  
+    background: var(--purple);  
     padding-top: 10px;
     width: 50px;
     height: 40px;
@@ -122,21 +123,20 @@ transform: rotate(-45deg) translate(7px,10px);
 }
 
 .nav-links li {
-    background: var(--backgroundColor);  
+    background: var(--purple);  
     padding:11px;
     margin-bottom:20px;
     margin-left:20px;
     border-radius: 10px;
 }
 
-.nav-links a {
-    
-    text-decoration: none;
-    color: whitesmoke;
+.nav-links li:hover {
+    background: var(--red); 
 }
 
-.nav-links a:hover {
-    border-bottom: 2px solid whitesmoke;
+.nav-links a {
+    text-decoration: none;
+    color: whitesmoke;
 }
 
 /* LANDING */
@@ -332,6 +332,129 @@ transform: rotate(-45deg) translate(7px,10px);
     }
    
   }
+/* COLLAPSIBLE CONTENT */
+
+.aboutCollapsibles {
+    background-color: var(--purple);
+    color: white;
+    cursor: pointer;
+    padding: 0px 20px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    border-radius: 5px;
+    display: inline-flex;
+    justify-content: space-between;
+  
+  }
+
+  .aboutButtonText {
+    font-size: large;
+    height: 65px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .activeCollapsibles, .aboutCollapsibles:hover {
+    background-color: var(--red);
+  }
+  
+  .aboutCollapsibles:after {
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  
+  .aboutExtras {
+    padding-top: 10px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.8s ease-in-out;
+   
+  }
+
+  .openCollapsibles {
+    padding: 30px 0;
+    transition: 0.8s ease-in-out;
+  }
+
+  .logosAbout {
+      height: 15vh;
+  }
+
+  /* COLLAPSIBLE ICON ON TOGGLE CHANGE */
+  .closed .iconVertical {
+      transition: all 0.5s ease-in-out;
+      transform: rotate(-90deg);
+  }
+
+  .closed .iconHorizontal {
+    transition: all 0.5s ease-in-out;
+    transform: rotate(-90deg);
+    opacity: 1;
+  }
+
+  .opened {
+      opacity: 1;
+  }
+
+  .opened .iconVertical{
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    
+  }
+
+  .opened .iconHorizontal{
+    transition: all 0.5s ease-in-out;
+    transform: rotate(90deg);
+    opacity: 0;
+  }
+
+  .collapseIcon {
+      height: 4em;
+      width: 4em;
+      font-size: 1em;
+      opacity: .7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .collapseIcon .iconCircle {
+      position: relative;
+      width: 2.55em;
+      height: 2.5em;
+      /* border-radius: 100%; */
+      /* border: solid .5em whitesmoke; */
+  }
+
+  .collapseIcon .iconCircle .iconHorizontal {
+      position: absolute;
+      background-color: whitesmoke;
+      width: 30px;
+      height: 5px;
+      left: 50%;
+      margin-left: -15px;
+      top: 50%;
+      margin-top: -2.5px;
+  }
+
+  .collapseIcon .iconCircle .iconVertical {
+    position: absolute;
+    background-color: whitesmoke;
+    width: 5px;
+    height: 30px;
+    left: 50%;
+    margin-left: -2.5px;
+    top: 50%;
+    margin-top: -15px;
+}
+
+
 
 /* SKILLS */
 
@@ -648,6 +771,11 @@ transform: rotate(-45deg) translate(7px,10px);
 .carouselElemenList li img {
     height: 100%;
     width: auto;
+}
+
+.carouselElemenList li img:hover {
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
 }
 
 
