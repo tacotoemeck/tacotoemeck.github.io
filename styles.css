@@ -811,9 +811,10 @@ transform: rotate(-45deg) translate(7px,10px);
     top: 60%;
     padding: 0 20px;
     color: var(--secondaryColor);
-    font-size: 1.5em;
+    font-size: auto;
     position: absolute;
     transition: 0.2s ease-out;
+    margin-top: 2vh;
 }
 
 .carouselElemenList li:hover .sliderPortfolioLinks {
@@ -831,7 +832,7 @@ transform: rotate(-45deg) translate(7px,10px);
 }
 
 .sliderPortfolioLinks a i {
-    font-size: 5em;
+    font-size: 5vh;
 }
 
 
@@ -841,7 +842,10 @@ transform: rotate(-45deg) translate(7px,10px);
     opacity: 0.7;
 }
 
-
+.sliderPortfolioLinks P {
+    margin-top: 2vh;
+    font-size: 2vh;
+}
 
 .transition {
     transform : translateX(-100%);
