@@ -5,9 +5,6 @@ for (let i = 0; i < collapsible.length; i++) {
         this.classList.toggle("activeCollapsibles");
         this.nextElementSibling.classList.toggle("openCollapsibles");
         this.firstChild.nextElementSibling.classList.toggle('opened')
-        console.log(this.nextElementSibling.classList)
-
-
         let content = this.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
@@ -21,16 +18,3 @@ for (let i = 0; i < collapsible.length; i++) {
 const icon = document.querySelector('.collapseIcon')
 
 
-// icon.addEventListener('click', function () {
-//     console.log(this)
-//     this.classList.toggle('opened')
-//     // iconVertical.classList.toggle('opened')
-// })
-
-// console.log(icon)
-
-// icon.onclick = function () {
-//     console.log(this)
-//     this.classList.toggle('opened')
-//     // iconVertical.classList.toggle('opened')
-// }

@@ -29,6 +29,7 @@ body {
 
     --purple: #480048;
     --red: #c04848;
+    --secondaryColor: whitesmoke;
     
     }
 
@@ -160,7 +161,7 @@ transform: rotate(-45deg) translate(7px,10px);
 }
 
 .nav-links a:hover {
-    border-bottom: 2px solid whitesmoke;
+    border-bottom: 2px solid var(--secondaryColor);
 }
 
 .landing img {
@@ -332,6 +333,13 @@ transform: rotate(-45deg) translate(7px,10px);
     }
    
   }
+
+  @media only screen and (max-width: 950px) {
+    .aboutText {
+        padding: 10px;
+    }
+
+  }
 /* COLLAPSIBLE CONTENT */
 
 .aboutCollapsibles {
@@ -428,13 +436,12 @@ transform: rotate(-45deg) translate(7px,10px);
       position: relative;
       width: 2.55em;
       height: 2.5em;
-      /* border-radius: 100%; */
-      /* border: solid .5em whitesmoke; */
+ 
   }
 
   .collapseIcon .iconCircle .iconHorizontal {
       position: absolute;
-      background-color: whitesmoke;
+      background-color: var(--secondaryColor);
       width: 30px;
       height: 5px;
       left: 50%;
@@ -445,7 +452,7 @@ transform: rotate(-45deg) translate(7px,10px);
 
   .collapseIcon .iconCircle .iconVertical {
     position: absolute;
-    background-color: whitesmoke;
+    background-color: var(--secondaryColor);
     width: 5px;
     height: 30px;
     left: 50%;
@@ -462,7 +469,7 @@ transform: rotate(-45deg) translate(7px,10px);
     background: var(--backgroundGradient);
     background: var(--backgroundGradient);
     background: var(--backgroundGradient);
-    color: whitesmoke;
+    color: var(--secondaryColor);
     height: auto;
     width: 100vw;
     -webkit-clip-path: polygon(0 0, 99% 21%, 100% 75%, 0 100%);
@@ -678,7 +685,7 @@ transform: rotate(-45deg) translate(7px,10px);
     height: 500px;
     width: 700px;
 
-    background-color: cadetblue;
+    background-color: black;
     overflow: hidden;
     margin: auto;
     margin-top: 10vh;
@@ -717,7 +724,7 @@ transform: rotate(-45deg) translate(7px,10px);
     background: transparent;
     border: none;
     font-size: 6vh;
-    color: whitesmoke;
+    color: var(--secondaryColor);
     opacity: 0.6;
 }
 
@@ -763,7 +770,11 @@ transform: rotate(-45deg) translate(7px,10px);
     margin: 0;
     display: flex;
     transition: 1s;
-    
+ 
+}
+
+.sliderLi {
+    position: relative;
 }
 
 
@@ -771,17 +782,66 @@ transform: rotate(-45deg) translate(7px,10px);
 .carouselElemenList li img {
     height: 100%;
     width: auto;
+
 }
 
-.carouselElemenList li img:hover {
+.carouselElemenList:hover li img {
     -webkit-filter: blur(5px);
     filter: blur(5px);
+    opacity: 0.4;
+    transition: 0.2s ease-out;
 }
 
 
-/* .carouselElemenList img {
-    width: 100%;
-} */
+.sliderPortfolioLinks {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    width: 40%;
+    display: inline-flex;
+    justify-content: space-between;
+    transition: 0.2s ease-out;
+}
+
+.sliderProjectInfo {
+    opacity: 0;
+    top: 60%;
+    padding: 0 20px;
+    color: var(--secondaryColor);
+    font-size: 1.5em;
+    position: absolute;
+    transition: 0.2s ease-out;
+}
+
+.carouselElemenList li:hover .sliderPortfolioLinks {
+    opacity: 1;
+    
+}
+
+.carouselElemenList li:hover .sliderProjectInfo {
+    opacity: 1;
+}
+
+.sliderPortfolioLinks a {
+    color: var(--secondaryColor);
+    
+}
+
+.sliderPortfolioLinks a i {
+    font-size: 5em;
+}
+
+
+.sliderPortfolioLinks i:hover {
+    transition: 0.2s ease-out;
+    transform: scale(1.5);
+    opacity: 0.7;
+}
+
+
 
 .transition {
     transform : translateX(-100%);
@@ -845,7 +905,7 @@ transform: rotate(-45deg) translate(7px,10px);
       margin-top: 50px;
       margin-bottom: 50px;
       display: inline-flex;
-      color: whitesmoke;
+      color: var(--secondaryColor);
       font-size: 2.5em;
       justify-content: space-around;
 
@@ -909,7 +969,8 @@ transform: rotate(-45deg) translate(7px,10px);
     }
 
     .footerP {
-        font-size: 1.2em;
+        font-size: 1.1em;
+        margin: 4px;
     }
 
     .footerEmail {
