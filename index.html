@@ -11,13 +11,14 @@
     <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Merriweather|Muli:300&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/794b746eef.js" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152883202-1"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-152883202-1');
     </script>
 </head>
@@ -47,7 +48,7 @@
 
         <header class="head" id="home">
             <div class="landing">
-                <img src="tom.png">
+                <img src="thumbs/tom.png">
 
                 <div class="landingText">
                     <h1 class="merriweather">Tom Wagner</h1>
@@ -63,7 +64,30 @@
                 <br><br>
                 <p>Ahoy, I’m Tomasz but everyone calls me Tom. I live in London and I am currently in training to become
                     a Front-End Developer. </p><br>
-                <p>Although I started developing websites aged 13, it wasn’t until summer ’19 when I really decided to
+                <pre>
+                    <code class="JSON">
+                    const Me = {
+                        nickname: "Tom",
+                        name: "Tomasz",
+                        last_name: "Wagner",
+                        married: true,
+                        Color: "green",
+                        Book: "Catch 22",
+                        first_website_written_at_age: 13,
+                        hobbies: 
+                        [ "coding", "technology", "art", "nature", "travel", "climbing", "backpacking", "food", "video games" ],
+                        core_skills: 
+                        [ "JavaScript", "HTML", "CSS", "cooking", "talking" ],
+                        secondary_skills: 
+                        [ "node.js", "express", "npm packages", "APIs", "React", "Redux", "Bootstrap", "GitHub", "MongoDB", "Mongoose" ],
+                        text_editors: 
+                        ["VS Code", "Sublime"],
+                        Before_coding: 
+                        ["hospitality", "sales", "recruitment", "own business"]
+                    };
+                </code>
+                </pre>
+                <!-- <p>Although I started developing websites aged 13, it wasn’t until summer ’19 when I really decided to
                     make it into a living. Since I took a very long break, many things have changed, and I had a lot of
                     catching up to do. Coding is my passion so it’s not difficult spending literally every spare moment
                     re-learning it. </p><br>
@@ -73,11 +97,11 @@
                 <p>On a personal level. I love backpacking, nature, hikes, climbing, food, my cat and most importantly
                     my beautiful wife Monica whose support allows me to dedicate myself to making my passion into a
                     career.
-                </p><br>
-                <p>Feel free to visit my learning journal on my github profile here: <a
+                </p><br> -->
+                <!-- <p>Feel free to visit my learning journal on my github profile here: <a
                         href="https://github.com/tacotoemeck">tacotomek</a> or connect with me on <a
                         href="https://www.codewars.com/users/tacotomek">CodeWars</a> if you wanted to pair programme
-                    some challenges. </p><br>
+                    some challenges. </p><br> -->
 
                 <button class="aboutCollapsibles"><span class="aboutButtonText">Founders And Coders</span>
                     <div class="collapseIcon closed">
@@ -252,11 +276,11 @@
 
 </html>
 
-<script src="skills.js"></script>
-<script src="navbar.js"></script>
-<script src="carousel.js"></script>
-<script src="hoverColors.js"></script>
-<script src="collapsible.js"></script>
+<script src="JS/skills.js"></script>
+<script src="JS/navbar.js"></script>
+<script src="JS/carousel.js"></script>
+<script src="JS/hoverColors.js"></script>
+<script src="JS/collapsible.js"></script>
 </body>
 
 </html>

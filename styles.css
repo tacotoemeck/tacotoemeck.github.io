@@ -323,6 +323,13 @@ transform: rotate(-45deg) translate(7px,10px);
     
 }
 
+.about pre {
+font-size: 2vh;
+
+}
+
+
+
 
 @media only screen and (min-width: 850px) {
     .aboutText {
@@ -332,6 +339,7 @@ transform: rotate(-45deg) translate(7px,10px);
         background: #eee;
         padding: 50px;
     }
+
    
   }
 
@@ -339,6 +347,14 @@ transform: rotate(-45deg) translate(7px,10px);
     .aboutText {
         padding: 10px;
     }
+
+    .about pre {
+        white-space: pre-line;       /* css-3 */
+        white-space: -moz-pre-line;   /* Mozilla, since 1999 */
+        white-space: -pre-line;       /* Opera 4-6 */
+        white-space: -o-pre-line;     /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        }
 
   }
 /* COLLAPSIBLE CONTENT */
@@ -1032,3 +1048,86 @@ transform: rotate(-45deg) translate(7px,10px);
     }
 
   }
+
+    /* hightlight */
+
+.hljs-comment,
+.hljs-quote {
+  color: #7e7887;
+}
+
+/* Atelier-Cave Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-attribute,
+.hljs-regexp,
+.hljs-link,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class {
+  color: #be4678;
+}
+
+/* Atelier-Cave Orange */
+.hljs-number,
+.hljs-meta,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params {
+  color: #aa573c;
+}
+
+/* Atelier-Cave Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet {
+  color: #2a9292;
+}
+
+/* Atelier-Cave Blue */
+.hljs-title,
+.hljs-section {
+  color: #576ddb;
+}
+
+/* Atelier-Cave Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+  color: #955ae7;
+}
+
+.hljs-deletion,
+.hljs-addition {
+  color: #19171c;
+  display: inline-block;
+  width: 100%;
+}
+
+.hljs-deletion {
+  background-color: #be4678;
+}
+
+.hljs-addition {
+  background-color: #2a9292;
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  background: #19171c;
+  color: #8b8792;
+  padding: 0.5em;
+
+  
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}
