@@ -6,11 +6,18 @@ const carousel = document.querySelector('.carousel')
 // ====================insert image url here content here: ===================================================== //
 
 const sliderContent = [
+
     {
         displayImage: "thumbs/calculator.jpg",
         viewLink: "https://codepen.io/tacotomek/pen/MWWdBdx",
         github: "https://github.com/tacotoemeck/JS-Projects/tree/master/calculator%20vanilla%20js",
         projectInfo: "Vanilla JavaScript calculator built as a part of FreeCodeCamp ciriculum. Use of CSS Grid. Math function uses recursive function in order to add a formula string in a correct order"
+    },
+    {
+        displayImage: "thumbs/ive.jpg",
+        viewLink: "https://polar-lake-04436.herokuapp.com/",
+        github: "https://github.com/tacotoemeck/iVeStock",
+        projectInfo: "Full Stack web application. Built in Node & Express, using MongoDB with Mongoose Schemas. Depoled on Heroku. Allows small restaurants to have an easier control of their daily stock takes"
     },
     {
         displayImage: "thumbs/journalEntry.jpg",
